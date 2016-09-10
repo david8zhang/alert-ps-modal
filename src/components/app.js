@@ -6,7 +6,8 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			showAlert: false
+			showAlert: false,
+			showCustomAlert: false
 		}
 	}
 
@@ -16,9 +17,18 @@ class App extends Component {
 					onClick={() => {this.setState({showAlert: true})}}>
 				Click to show an alert!
 			</button>
+			<br/>
+			<button className='button'
+					onClick={() => {this.setState({showCustomAlert: true})}}>
+				Click to show an alert with custom content!
+			</button>
 			<AlertModal displayModal={this.state.showAlert} 
 						message='Error Message here!' 
 						onClick={() => {this.setState({showAlert: !this.state.showAlert})}}/>
+			<AlertModal displayModal={this.state.showCustomAlert}  
+						onClick={() => {this.setState({showCustomAlert: !this.state.showCustomAlert})}}>
+					<img src='https://pics.onsizzle.com/Facebook-7a2fd9.png'></img>
+			</AlertModal>
 		</div>
 	}
 }
