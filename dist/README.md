@@ -1,6 +1,5 @@
 # Description
-A simple error message alert modal. Credit goes to react-modal-dialog for 
-the base modal design: [react-modal-dialog](https://github.com/qimingweng/react-modal-dialog)
+A simple error message alert modal. 
 
 # Styles
 You must have Foundation 6 included as part of the project for this component to work!
